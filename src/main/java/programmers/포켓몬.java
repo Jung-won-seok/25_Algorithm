@@ -24,5 +24,6 @@ public class 포켓몬 {
         } else {
             return nums.length/2;
         }
+
     }
 }
