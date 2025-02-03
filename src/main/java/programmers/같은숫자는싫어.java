@@ -1,6 +1,5 @@
 package programmers;
 
-import java.util.ArrayList;
 import java.util.Stack;
 
 public class 같은숫자는싫어 {
@@ -16,7 +15,6 @@ public class 같은숫자는싫어 {
                 list.add(arr[i]);
             }
         }
-
 
         //ArrayList를 배열로 변환
         return list.stream().mapToInt(i -> i).toArray();
