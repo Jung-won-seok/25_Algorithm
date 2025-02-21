@@ -1,7 +1,19 @@
 package programmers;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class 기능개발 {
-    public int[] solution(int[] progresses, int[] speeds) {
+    public static void main(String[] args) {
+        int[] p = {93, 33, 55};
+        int[] s = {1, 30, 5};
+        int[] solution = solution(p, s);
+        for (int a : solution) {
+            System.out.println(a);
+        }
+    }
+    public static int[] solution(int[] progresses, int[] speeds) {
         //progresses = [93, 33, 55], speeds = [1, 30, 5], return = [2, 1]
         //progresses = [95, 90, 99, 99, 80, 99], speeds = [1, 1, 1, 1, 1, 1], return = [1, 3, 2]
 
@@ -17,26 +29,24 @@ public class 기능개발 {
             }
         }
 
-        int cnt = 0;
-        for (int i = 0; i < duration.length; i++) {
-            if (duration[i] > duration[i + 1]) {
-                cnt++;
+        ArrayList<Integer> resultList = new ArrayList<>();
+        int i = 0;
+        while (i < duration.length) {
+            int start = duration[i];
+            int count = 1;
+            int j = i + 1;
+            while (j < duration.length && duration[j] <= start) {
+                count++;
+                j++;
             }
+            resultList.add(count);
+            i = j;
         }
-
-        int[] answer = new int[cnt];
-        int x = duration[0];
-        int c = 1;
-        int num = 0;
-        for (int i = 1; i < duration.length; i++) {
-            if (x > duration[i]) {
-                c++;
-            } else {
-                answer[num] = c;
-                c = 1;
-                num++;
-            }
+        // ArrayList를 int[]로 변환
+        int[] result = new int[resultList.size()];
+        for (int k = 0; k < result.length; k++) {
+            result[k] = resultList.get(k);
         }
-        return answer;
+        return result;
     }
 }
