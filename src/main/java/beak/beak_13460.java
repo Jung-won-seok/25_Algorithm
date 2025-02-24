@@ -14,8 +14,21 @@ public class beak_13460 {
             String line = sc.nextLine();
             for (int j = 0; j < M; j++) {
                 board[i][j] = line.charAt(j);
+                if (line.charAt(j) == 'R') {
+                    int r_height = i;
+                    int r_weight = j;
+                }
+                if (line.charAt(j) == 'B') {
+                    int b_height = i;
+                    int b_weight = j;
+                }
+                if (line.charAt(j) == 'O') {
+                    int o_height = i;
+                    int o_weight = j;
+                }
             }
         }
+
 
 
         for (int i = 0; i < N; i++) {
@@ -24,5 +37,25 @@ public class beak_13460 {
             }
             System.out.println();
         }
+    }
+
+    //왼쪽으로 기울이기
+    public void left() {
+
+    }
+
+    //오른쪽으로 기울이기
+    public void right() {
+
+    }
+
+    //위로 기울이기
+    public void up() {
+
+    }
+
+    //아래로 기울이기
+    public void down() {
+
     }
 }
