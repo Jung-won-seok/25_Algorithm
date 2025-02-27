@@ -28,8 +28,6 @@ public class beak_3190 {
             entries.add(new Entry(num, dir));
         }
 
-
-
     }
 
     static class Entry {
