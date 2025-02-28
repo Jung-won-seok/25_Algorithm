@@ -27,7 +27,6 @@ public class beak_3190 {
             char dir = sc.next().charAt(0);
             entries.add(new Entry(num, dir));
         }
-
     }
 
     static class Entry {
