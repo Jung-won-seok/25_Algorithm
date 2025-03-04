@@ -31,6 +31,54 @@ public class beak_14499 {
         }
 
 
+        //주사위 굴리기
+        for (int i = 0; i < move.length; i++) {
+            int[] newDice = new int[6];
+
+            switch (move[i]) {
+                case 1: // 동쪽으로 굴림
+                    newDice[0] = dice[3];
+                    newDice[1] = dice[1];
+                    newDice[2] = dice[0];
+                    newDice[3] = dice[5];
+                    newDice[4] = dice[4];
+                    newDice[5] = dice[2];
+                    break;
+
+                case 2: // 서쪽으로 굴림
+                    newDice[0] = dice[2];
+                    newDice[1] = dice[1];
+                    newDice[2] = dice[5];
+                    newDice[3] = dice[0];
+                    newDice[4] = dice[4];
+                    newDice[5] = dice[3];
+                    break;
+
+                case 3: // 북쪽으로 굴림
+                    newDice[0] = dice[4];
+                    newDice[1] = dice[0];
+                    newDice[2] = dice[2];
+                    newDice[3] = dice[3];
+                    newDice[4] = dice[5];
+                    newDice[5] = dice[1];
+                    break;
+
+                case 4: // 남쪽으로 굴림
+                    newDice[0] = dice[1];
+                    newDice[1] = dice[5];
+                    newDice[2] = dice[2];
+                    newDice[3] = dice[3];
+                    newDice[4] = dice[0];
+                    newDice[5] = dice[4];
+                    break;
+            }
+
+            // 주사위 상태 업데이트
+            dice = newDice;
+        }
+
+
+
 
     }
 }
