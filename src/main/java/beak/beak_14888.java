@@ -16,6 +16,7 @@ public class beak_14888 {
         N = in.nextInt();
         number = new int[N];
 
+
         // 숫자 입력
         for (int i = 0; i < N; i++) {
             number[i] = in.nextInt();
