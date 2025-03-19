@@ -31,6 +31,16 @@ public class beak_15658 {
         for (int i = 0; i < 4; i++) {
             if (operator[i] > 0) {
                 operator[i]--;
+
+                switch (i) {
+
+                    case 0: dfs(num + number[idx], idx + 1); break;
+                    case 1: dfs(num - number[idx], idx + 1); break;
+                    case 2: dfs(num * number[idx], idx + 1); break;
+                    case 3: dfs(num / number[idx], idx + 1); break;
+                }
+
+                operator[i]++;
             }
         }
     }
