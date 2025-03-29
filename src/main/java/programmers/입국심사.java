@@ -11,6 +11,7 @@ public class 입국심사 {
         Arrays.sort(times);
         long min = 1;
 
+        //최고로 오래 걸리는 경우의 수
         long max = (long) times[times.length - 1] * n;
         long mid = 0;
         long sum;
